@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paterne — Full-stack developer & SOC analyst</title>
+<meta name="description" content="Portfolio of Paterne, full-stack developer and L1 SOC analyst student. Projects spanning web development and cybersecurity.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+
+<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#home" class="logo"><span class="logo-caret">&gt;</span> paterne_<span class="cursor">_</span></a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <i class="ti ti-menu-2" aria-hidden="true"></i>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+
+      <div class="dropdown">
+        <button class="nav-link dropdown-trigger" id="projectsTrigger" aria-haspopup="true" aria-expanded="false">
+          Projects <i class="ti ti-chevron-down" id="projectsChevron" aria-hidden="true"></i>
+        </button>
+        <div class="dropdown-menu" id="projectsMenu" role="menu">
+          <a href="#projects-web" class="dropdown-item" role="menuitem">
+            <i class="ti ti-code" aria-hidden="true"></i> Web development
+          </a>
+          <a href="#projects-security" class="dropdown-item" role="menuitem">
+            <i class="ti ti-shield-lock" aria-hidden="true"></i> Cybersecurity
+          </a>
+        </div>
+      </div>
+
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="home">
+    <p class="eyebrow">L1 SOC analyst student &middot; full-stack developer</p>
+    <h1>Building on the web,<br>defending it too.</h1>
+    <p class="hero-copy">Portfolio of Paterne, spanning full-stack development and security analysis, from live apps to incident-response drills.</p>
+
+    <div class="terminal" aria-hidden="true">
+      <div class="terminal-bar">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-amber"></span>
+        <span class="dot dot-green"></span>
+      </div>
+      <div class="terminal-body" id="terminalBody"></div>
+    </div>
+
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">View projects</a>
+      <a href="#contact" class="btn btn-outline">Get in touch</a>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <div class="section-head">
+      <h2>Featured projects</h2>
+      <span class="count-tag" id="countTag">showing 04 of --</span>
+    </div>
+
+    <div class="project-grid" id="projectGrid">
+      <!-- Project cards are injected by script.js from the projects data array -->
+    </div>
+
+    <div class="show-all-wrap">
+      <button class="btn btn-terminal" id="showAllBtn">$ view --all-projects</button>
+    </div>
+  </section>
+
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> Z.Paterne.</p>
+</footer>
+
+<script src="scripts/script.js"></script>
+</body>
+</html>
