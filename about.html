@@ -1,99 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About — Paterne</title>
-<meta name="description" content="About Paterne, full-stack developer and L1 SOC analyst student — skills and experience.">
+<title>À propos — Paterne</title>
+<meta name="description" content="À propos de Paterne, développeur full-stack junior — compétences et expérience.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
 
-<link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<a class="skip-link" href="#main">Skip to content</a>
+<a class="skip-link" href="#main">Aller au contenu</a>
 
 <header class="nav">
   <div class="nav-inner">
-    <a href="index.html" class="logo"><span class="logo-caret">&gt;</span> paterne_<span class="cursor">_</span></a>
+    <a href="index.html" class="logo">Paterne<span class="logo-dot">.</span></a>
 
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+    <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navLinks">
       <i class="ti ti-menu-2" aria-hidden="true"></i>
     </button>
 
     <nav class="nav-links" id="navLinks">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="about.html" class="nav-link nav-link-active">About</a>
+      <a href="index.html" class="nav-link">Accueil</a>
+      <a href="about.html" class="nav-link nav-link-active">À propos</a>
 
       <div class="dropdown">
         <button class="nav-link dropdown-trigger" id="projectsTrigger" aria-haspopup="true" aria-expanded="false">
-          Projects <i class="ti ti-chevron-down" id="projectsChevron" aria-hidden="true"></i>
+          Projets <i class="ti ti-chevron-down" id="projectsChevron" aria-hidden="true"></i>
         </button>
         <div class="dropdown-menu" id="projectsMenu" role="menu">
-          <a href="index.html#projects-web" class="dropdown-item" role="menuitem">
-            <i class="ti ti-code" aria-hidden="true"></i> Web development
+          <a href="projects.html#web" class="dropdown-item tone-web" role="menuitem">
+            <i class="ti ti-code" aria-hidden="true"></i> Développement web
           </a>
-          <a href="index.html#projects-security" class="dropdown-item" role="menuitem">
-            <i class="ti ti-shield-lock" aria-hidden="true"></i> Cybersecurity
+          <a href="projects.html#client" class="dropdown-item tone-client" role="menuitem">
+            <i class="ti ti-briefcase" aria-hidden="true"></i> Projets clients
+          </a>
+          <a href="projects.html#security" class="dropdown-item tone-security" role="menuitem">
+            <i class="ti ti-shield-lock" aria-hidden="true"></i> Cybersécurité
           </a>
         </div>
       </div>
 
-      <a href="index.html#contact" class="nav-link">Contact</a>
+      <a href="contact.html" class="nav-link">Contact</a>
     </nav>
   </div>
 </header>
 
 <main id="main">
 
-  <section class="about-hero">
-    <div class="avatar" aria-hidden="true">PT</div>
-    <p class="terminal-line">$ cat about.md</p>
-    <h1>Hi, I'm Paterne.</h1>
-    <p class="about-copy">I'm a junior full-stack developer and level 1 SOC analyst student, splitting my time between building interfaces and learning how to defend them. I like clean, modern UI as much as I like a well-organized log file.</p>
+  <section class="hero-photo">
+    <img class="hero-photo-img" src="" alt="">
+    <div class="hero-photo-scrim"></div>
+    <div class="hero-photo-content">
+      <div class="hero-eyebrow">À propos</div>
+      <h1>Salut, je suis Paterne.</h1>
+      <p class="hero-photo-copy">Développeur full-stack junior avec un fort intérêt pour le design d'interface, actuellement en formation d'analyste SOC niveau 1.</p>
+    </div>
+  </section>
+
+  <section class="about-hero-inline reveal">
+    <p class="about-copy">J'aime concevoir des expériences web propres, modernes et agréables à utiliser — aussi bien pour mes projets personnels que pour mes clients.</p>
 
     <div class="stats-row">
       <div class="stat">
-        <div class="stat-value">2</div>
-        <div class="stat-label">internships</div>
+        <div class="stat-value">3</div>
+        <div class="stat-label">expériences</div>
       </div>
       <div class="stat">
         <div class="stat-value">9</div>
-        <div class="stat-label">tools &amp; frameworks</div>
+        <div class="stat-label">outils &amp; frameworks</div>
       </div>
       <div class="stat">
-        <div class="stat-value stat-accent-secure">L1</div>
-        <div class="stat-label">SOC in training</div>
+        <div class="stat-value stat-accent">L1</div>
+        <div class="stat-label">formation SOC</div>
       </div>
     </div>
   </section>
 
   <section class="skills-section">
-    <p class="terminal-line">$ ls skills/ -R</p>
-
-    <div class="skill-grid" id="skillGrid">
-      <!-- Skill categories are injected by script.js from the skills data array -->
-    </div>
+    <h2 class="reveal">Compétences</h2>
+    <div class="skill-grid" id="skillGrid"></div>
   </section>
 
   <section class="experience-section">
-    <p class="terminal-line">$ history --experience</p>
-
-    <div class="timeline" id="timeline">
-      <!-- Experience entries are injected by script.js from the experience data array -->
-    </div>
+    <h2 class="reveal">Expérience</h2>
+    <div class="timeline" id="timeline"></div>
   </section>
 
 </main>
 
 <footer class="site-footer">
-  <p>&copy; <span id="year"></span> Z.paterne. </p>
+  <p>&copy; <span id="year"></span> Paterne. Créé avec HTML, CSS et JavaScript.</p>
 </footer>
 
-<script src="scripts/script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
