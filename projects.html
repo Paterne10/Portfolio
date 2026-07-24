@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projets — Paterne</title>
+<meta name="description" content="Tous les projets de Paterne : développement web, projets clients et cybersécurité.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Aller au contenu</a>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Paterne<span class="logo-dot">.</span></a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navLinks">
+      <i class="ti ti-menu-2" aria-hidden="true"></i>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="nav-link">Accueil</a>
+      <a href="about.html" class="nav-link">À propos</a>
+
+      <div class="dropdown">
+        <button class="nav-link dropdown-trigger nav-link-active" id="projectsTrigger" aria-haspopup="true" aria-expanded="false">
+          Projets <i class="ti ti-chevron-down" id="projectsChevron" aria-hidden="true"></i>
+        </button>
+        <div class="dropdown-menu" id="projectsMenu" role="menu">
+          <a href="#web" class="dropdown-item tone-web" role="menuitem">
+            <i class="ti ti-code" aria-hidden="true"></i> Développement web
+          </a>
+          <a href="#client" class="dropdown-item tone-client" role="menuitem">
+            <i class="ti ti-briefcase" aria-hidden="true"></i> Projets clients
+          </a>
+          <a href="#security" class="dropdown-item tone-security" role="menuitem">
+            <i class="ti ti-shield-lock" aria-hidden="true"></i> Cybersécurité
+          </a>
+        </div>
+      </div>
+
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="projects-intro">
+    <p class="breadcrumb"><a href="index.html">Accueil</a> / Projets</p>
+    <h1>Tous les projets</h1>
+
+    <div class="filter-row" id="filterRow">
+      <button class="filter-btn active" data-filter="all">Tout</button>
+      <button class="filter-btn" data-filter="web">Développement web</button>
+      <button class="filter-btn" data-filter="client">Projets clients</button>
+      <button class="filter-btn" data-filter="security">Cybersécurité</button>
+    </div>
+  </section>
+
+  <section class="project-category" id="web" data-category="web">
+    <div class="category-head">
+      <i class="ti ti-code" style="color: var(--accent);" aria-hidden="true"></i>
+      <h2>Développement web</h2>
+      <span class="count-tag" id="webCount"></span>
+    </div>
+    <div class="project-grid" id="webGrid"></div>
+  </section>
+
+  <section class="project-category" id="client" data-category="client">
+    <div class="category-head">
+      <i class="ti ti-briefcase" style="color: var(--client);" aria-hidden="true"></i>
+      <h2>Projets clients</h2>
+      <span class="count-tag" id="clientCount"></span>
+    </div>
+    <div class="project-grid" id="clientGrid"></div>
+  </section>
+
+  <section class="project-category" id="security" data-category="security">
+    <div class="category-head">
+      <i class="ti ti-shield-lock" style="color: var(--security);" aria-hidden="true"></i>
+      <h2>Cybersécurité</h2>
+      <span class="count-tag" id="securityCount"></span>
+    </div>
+    <div class="project-grid" id="securityGrid"></div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> Paterne. Créé avec HTML, CSS et JavaScript.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
