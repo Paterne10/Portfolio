@@ -1,97 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Paterne — Full-stack developer & SOC analyst</title>
-<meta name="description" content="Portfolio of Paterne, full-stack developer and L1 SOC analyst student. Projects spanning web development and cybersecurity.">
+<title>Paterne — Développeur full-stack</title>
+<meta name="description" content="Portfolio de Paterne, développeur full-stack junior, projets personnels et clients.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
 
-<link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<a class="skip-link" href="#main">Skip to content</a>
+<a class="skip-link" href="#main">Aller au contenu</a>
 
 <header class="nav">
   <div class="nav-inner">
-    <a href="#home" class="logo"><span class="logo-caret">&gt;</span> paterne_<span class="cursor">_</span></a>
+    <a href="index.html" class="logo">Paterne<span class="logo-dot">.</span></a>
 
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+    <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navLinks">
       <i class="ti ti-menu-2" aria-hidden="true"></i>
     </button>
 
     <nav class="nav-links" id="navLinks">
-      <a href="#home" class="nav-link">Home</a>
-      <a href="about.html" class="nav-link">About</a>
+      <a href="index.html" class="nav-link nav-link-active">Accueil</a>
+      <a href="about.html" class="nav-link">À propos</a>
 
       <div class="dropdown">
         <button class="nav-link dropdown-trigger" id="projectsTrigger" aria-haspopup="true" aria-expanded="false">
-          Projects <i class="ti ti-chevron-down" id="projectsChevron" aria-hidden="true"></i>
+          Projets <i class="ti ti-chevron-down" id="projectsChevron" aria-hidden="true"></i>
         </button>
         <div class="dropdown-menu" id="projectsMenu" role="menu">
-          <a href="#projects-web" class="dropdown-item" role="menuitem">
-            <i class="ti ti-code" aria-hidden="true"></i> Web development
+          <a href="projects.html#web" class="dropdown-item tone-web" role="menuitem">
+            <i class="ti ti-code" aria-hidden="true"></i> Développement web
           </a>
-          <a href="#projects-security" class="dropdown-item" role="menuitem">
-            <i class="ti ti-shield-lock" aria-hidden="true"></i> Cybersecurity
+          <a href="projects.html#client" class="dropdown-item tone-client" role="menuitem">
+            <i class="ti ti-briefcase" aria-hidden="true"></i> Projets clients
+          </a>
+          <a href="projects.html#security" class="dropdown-item tone-security" role="menuitem">
+            <i class="ti ti-shield-lock" aria-hidden="true"></i> Cybersécurité
           </a>
         </div>
       </div>
 
-      <a href="#contact" class="nav-link">Contact</a>
+      <a href="contact.html" class="nav-link">Contact</a>
     </nav>
   </div>
 </header>
 
 <main id="main">
 
-  <section class="hero" id="home">
-    <p class="eyebrow">L1 SOC analyst student &middot; full-stack developer</p>
-    <h1>Building on the web,<br>defending it too.</h1>
-    <p class="hero-copy">Portfolio of Paterne, spanning full-stack development and security analysis, from live apps to incident-response drills.</p>
-
-    <div class="terminal" aria-hidden="true">
-      <div class="terminal-bar">
-        <span class="dot dot-red"></span>
-        <span class="dot dot-amber"></span>
-        <span class="dot dot-green"></span>
+  <section class="hero-photo">
+    <img class="hero-photo-img" src="" alt="">
+    <div class="hero-photo-scrim"></div>
+    <div class="hero-photo-content">
+      <div class="hero-eyebrow">Développeur full-stack &middot; créateur soucieux de l'UX</div>
+      <h1>Salut, je suis Paterne.<br>Je crée des expériences web propres et fonctionnelles.</h1>
+      <p class="hero-photo-copy">Développeur full-stack junior alliant une ingénierie solide à un sens du design, des projets personnels aux sites clients.</p>
+      <div class="hero-actions">
+        <a href="projects.html" class="btn btn-primary">Voir les projets</a>
+        <a href="contact.html" class="btn btn-ghost-light">Me contacter</a>
       </div>
-      <div class="terminal-body" id="terminalBody"></div>
-    </div>
-
-    <div class="hero-actions">
-      <a href="#projects" class="btn btn-primary">View projects</a>
-      <a href="#contact" class="btn btn-outline">Get in touch</a>
     </div>
   </section>
 
-  <section class="projects" id="projects">
+  <section class="projects">
     <div class="section-head">
-      <h2>Featured projects</h2>
-      <span class="count-tag" id="countTag">showing 04 of --</span>
+      <h2>Projets à la une</h2>
+      <span class="count-tag" id="countTag"></span>
     </div>
 
-    <div class="project-grid" id="projectGrid">
-      <!-- Project cards are injected by script.js from the projects data array -->
-    </div>
+    <div class="project-grid" id="projectGrid"></div>
 
     <div class="show-all-wrap">
-      <button class="btn btn-terminal" id="showAllBtn">$ view --all-projects</button>
+      <button class="btn btn-outline" id="showAllBtn">Voir tous les projets</button>
     </div>
   </section>
-
 
 </main>
 
 <footer class="site-footer">
-  <p>&copy; <span id="year"></span> Z.Paterne.</p>
+  <p>&copy; <span id="year"></span> Paterne. Créé avec HTML, CSS et JavaScript.</p>
 </footer>
 
-<script src="scripts/script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
