@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Paterne</title>
+<meta name="description" content="Contactez Paterne pour un projet, une question ou une collaboration.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Aller au contenu</a>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Paterne<span class="logo-dot">.</span></a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navLinks">
+      <i class="ti ti-menu-2" aria-hidden="true"></i>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="nav-link">Accueil</a>
+      <a href="about.html" class="nav-link">À propos</a>
+
+      <div class="dropdown">
+        <button class="nav-link dropdown-trigger" id="projectsTrigger" aria-haspopup="true" aria-expanded="false">
+          Projets <i class="ti ti-chevron-down" id="projectsChevron" aria-hidden="true"></i>
+        </button>
+        <div class="dropdown-menu" id="projectsMenu" role="menu">
+          <a href="projects.html#web" class="dropdown-item tone-web" role="menuitem">
+            <i class="ti ti-code" aria-hidden="true"></i> Développement web
+          </a>
+          <a href="projects.html#client" class="dropdown-item tone-client" role="menuitem">
+            <i class="ti ti-briefcase" aria-hidden="true"></i> Projets clients
+          </a>
+          <a href="projects.html#security" class="dropdown-item tone-security" role="menuitem">
+            <i class="ti ti-shield-lock" aria-hidden="true"></i> Cybersécurité
+          </a>
+        </div>
+      </div>
+
+      <a href="contact.html" class="nav-link nav-link-active">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero-photo">
+    <img class="hero-photo-img" src="" alt="">
+    <div class="hero-photo-scrim"></div>
+    <div class="hero-photo-content">
+      <div class="hero-eyebrow">Contact</div>
+      <h1>Discutons de votre projet.</h1>
+      <p class="hero-photo-copy">Une question, un projet en tête ou simplement envie d'échanger ? Écrivez-moi.</p>
+    </div>
+  </section>
+
+  <section class="contact-section">
+
+    <div class="contact-info">
+      <a href="mailto:paterne@exemple.com" class="info-card reveal">
+        <div class="info-icon"><i class="ti ti-mail" aria-hidden="true"></i></div>
+        <div>
+          <div class="info-label">Email</div>
+          <div class="info-value">paterne@exemple.com</div>
+        </div>
+      </a>
+
+      <a href="https://linkedin.com/in/paterne" class="info-card reveal" target="_blank" rel="noopener">
+        <div class="info-icon"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></div>
+        <div>
+          <div class="info-label">LinkedIn</div>
+          <div class="info-value">linkedin.com/in/paterne</div>
+        </div>
+      </a>
+
+      <a href="https://github.com/paterne" class="info-card reveal" target="_blank" rel="noopener">
+        <div class="info-icon"><i class="ti ti-brand-github" aria-hidden="true"></i></div>
+        <div>
+          <div class="info-label">GitHub</div>
+          <div class="info-value">github.com/paterne</div>
+        </div>
+      </a>
+
+      <div class="info-card reveal">
+        <div class="info-icon"><i class="ti ti-map-pin" aria-hidden="true"></i></div>
+        <div>
+          <div class="info-label">Localisation</div>
+          <div class="info-value">Libreville, Gabon</div>
+        </div>
+      </div>
+    </div>
+
+    <form class="contact-form reveal" id="contactForm">
+      <label class="form-label" for="fname">Nom</label>
+      <input class="form-field" type="text" id="fname" name="name" placeholder="Votre nom" required>
+
+      <label class="form-label" for="femail">Email</label>
+      <input class="form-field" type="email" id="femail" name="email" placeholder="vous@exemple.com" required>
+
+      <label class="form-label" for="fmessage">Message</label>
+      <textarea class="form-field" id="fmessage" name="message" rows="4" placeholder="Parlez-moi de votre projet..." required></textarea>
+
+      <button class="form-submit" type="submit">Envoyer le message</button>
+      <p class="form-note" id="formNote"></p>
+    </form>
+
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> Paterne. Créé avec HTML, CSS et JavaScript.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
