@@ -38,8 +38,8 @@ const webProjects = [
     tone: "web",
     icon: "ti-checklist",
     tech: ["javascript", "css"],
-    github: "#",
-    live: "#"
+    github: "https://github.com/Paterne10/To-do-list-.git",
+    live: "https://to-do-list-eta-sable.vercel.app/"
   },
   {
     name: "Cartes tarifaires",
