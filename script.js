@@ -11,8 +11,8 @@ const webProjects = [
     tone: "web",
     icon: "ti-wallet",
     tech: ["javascript", "css"],
-    github: "#",
-    live: "#"
+    github: "https://github.com/Paterne10/Expense-Tracker",
+    live: "https://expense-tracker-two-sepia-70.vercel.app/"
   },
   {
     name: "QCM",
